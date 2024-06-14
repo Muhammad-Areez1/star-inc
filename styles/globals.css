@@ -24,6 +24,10 @@ body {
   @apply relative shineHover bg-colorPrimary hover:bg-colorSecondary text-colorThemeSecondary capitalize rounded-lg hover:shadow-lg px-6 py-3 transition-all ease-in-out duration-200;
 }
 
+.buttonPrimaryIcon {
+  @apply relative w-8 h-8 flex items-center justify-center bg-colorTertiary text-colorThemeSecondary rounded-full before:absolute before:-right-full hover:before:right-full before:top-0 before:h-full before:w-3 before:rotate-12 before:bg-white before:blur-sm before:opacity-20 before:duration-300 opacity-90 hover:opacity-100 hover:shadow-lg overflow-hidden p-0.5 transition-all ease-out duration-150;
+}
+
 .sideBarli:hover:before{
   content: '';
     width: 10px;
@@ -44,7 +48,7 @@ body {
   filter: brightness(0) saturate(100%) invert(48%) sepia(13%) saturate(2522%) hue-rotate(315deg) brightness(109%) contrast(99%);
 }
 .sideBarActive{
-  background:rgb(254 202 202) !important;
+  @apply bg-red-100;
 }
 
 .sideBarActive:before{

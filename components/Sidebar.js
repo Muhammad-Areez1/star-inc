@@ -18,7 +18,7 @@ export default function Sidebar({ isOpen }) {
                     <nav>
                         <ul className="flex flex-col">
                             {menuItems.map(({ url, title, id, icon }) => (
-                                <li key={id} className={`${router.route === url ? 'sideBarActive' : 'md:bg-colorThemeSecondary md:bg-opacity-70 hover:md:bg-red-200 md:backdrop-blur-lg'} w-full flex items-center justify-center md:justify-start hover:shadow-xl transition-all ease-in-out duration-200 sideBarli relative`}>
+                                <li key={id} className={`${router.route === url ? 'sideBarActive' : 'md:bg-colorThemeSecondary md:bg-opacity-70 hover:md:bg-red-100 md:backdrop-blur-lg'} w-full flex items-center justify-center md:justify-start hover:shadow-xl transition-all ease-in-out duration-200 sideBarli relative`}>
                                     <Link href={url} className='w-full flex items-center md:p-4 gap-1'>
                                         <div className='flex items-center w-12 h-12 m-auto md:m-0'>
                                             <div className={`flex items-center justify-center h-12 w-10 bg-transparent rounded-lg p-2`}>
