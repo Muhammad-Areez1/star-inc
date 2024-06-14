@@ -28,8 +28,8 @@ export default function Layout({ children }) {
             </div> :
             <div className='flex h-screen overflow-hidden'>
                 <Sidebar isOpen={isOpen} />
-                <div className='relative flex-1 overflow-auto'>
-                    <div className="  backdrop-blur-lg sticky top-0 z-20 border-b border-gray-200 px-10 py-5">
+                <div className='relative flex-1 flex flex-col overflow-auto'>
+                    <div className="backdrop-blur-lg sticky top-0 z-20 border-b border-gray-200 px-10 py-5">
                         <Header toggleSidebar={toggleSidebar} />
                     </div>
                     <main className='flex-1'>{children}</main>
