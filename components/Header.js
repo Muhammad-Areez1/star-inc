@@ -21,11 +21,11 @@ const Header = ({ toggleSidebar }) => {
             <div className="flex items-center space-x-3 justify-end">
                 {/* <FaBars className="text-2xl cursor-pointer" onClick={toggleSidebar} /> */}
                 <span className='text-gray-700 text-2xl'>
-                    <h2>gg</h2>
+                    <h2 className='text-5xl font-bold text-[#223575] uppercase'>gg</h2>
                 </span>
             </div>
             <div className='flex justify-end  items-center space-x-2'>
-                <FaBell className='text-xl' />
+                <FaBell className='text-2xl text-[#FE665C]' />
             </div>
         </header>
     )

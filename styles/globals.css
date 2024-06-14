@@ -61,3 +61,8 @@ body {
 .sideBarActive img{
   filter: brightness(0) saturate(100%) invert(48%) sepia(13%) saturate(2522%) hue-rotate(315deg) brightness(109%) contrast(99%);
 }
+.muiTable{box-shadow: 0px 0px 10px rgba(0,0,0,0.2); border-radius: 10px;}
+#simple-menu .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{width: 186px; height: 167px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); border-radius: 15px; background: #FE665C; color: #fff;}
+#simple-menu .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul{padding: 20px;}
+#simple-menu .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul li{display: flex; flex-direction: column; border-bottom: 1px solid #fff;}
+.box-shadow{box-shadow: 0px 0px 10px rgba(0,0,0,0.3);}
