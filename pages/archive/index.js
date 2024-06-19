@@ -9,7 +9,7 @@ import { ROLES, SUB_ROLES } from "@/utils/constant";
 import chatNotSelected from '../../assets/images/empty-chat.webp';
 import avatarImage from '../../assets/images/user-default.png';
 
-const Conversation = () => {
+const ArchiveChat = () => {
     const router = useRouter();
     // const dispatch = useDispatch();
     // const userId = router.query.id;
@@ -215,7 +215,7 @@ const Conversation = () => {
             lastName: 'Doe',
             email: 'johndoe@example.com',
             date: 'June 14, 2024',
-            isArchive: false,
+            isArchive: true,
         },
         {
             id: 456,
@@ -224,7 +224,7 @@ const Conversation = () => {
             lastName: 'Smith',
             email: 'johndoe@example.com',
             date: 'June 14, 2024',
-            isArchive: false,
+            isArchive: true,
         },
         {
             id: 789,
@@ -232,7 +232,7 @@ const Conversation = () => {
             firstName: 'Sara',
             email: 'johndoe@example.com',
             date: 'June 14, 2024',
-            isArchive: false,
+            isArchive: true,
         },
     ];
     const selectedUser = {
@@ -317,7 +317,7 @@ const Conversation = () => {
     return (
         <div className="w-11/12 max-w-[1300px] h-[90vh] flex items-center justify-center m-auto">
             <div className='w-full h-[90%] flex flex-col gap-8 bg-colorThemeSecondary shadow-md p-10'>
-                <h1 className='headingPrimary uppercase'>Chat</h1>
+                <h1 className='headingPrimary uppercase'>Archive Chat</h1>
                 <div className="relative flex-1 grid grid-cols-12 lg:gap-10 overflow-hidden">
                     {/* recent chat sidebar */}
                     <div className="col-span-12 xl:col-span-4 pt-2 overflow-hidden">
@@ -546,4 +546,4 @@ const Conversation = () => {
     );
 };
 
-export default Conversation;
+export default ArchiveChat;

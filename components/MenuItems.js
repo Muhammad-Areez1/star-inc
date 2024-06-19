@@ -6,8 +6,6 @@ import settings from '../assets/images/icons/settings.png';
 import statistics from '../assets/images/icons/statistics.png';
 import logout from '../assets/images/icons/logout.png';
 
-
-
 export default [
     {
         id: 1,
@@ -45,11 +43,4 @@ export default [
         title: 'Settings',
         icon: settings
     },
-    {
-        id: 7,
-        url: '/login',
-        title: 'Logout',
-        icon: logout
-    }
-
 ];
