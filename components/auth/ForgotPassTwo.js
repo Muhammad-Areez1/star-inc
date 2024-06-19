@@ -8,10 +8,11 @@ import { MdOutlinePassword } from "react-icons/md";
 import { useRouter } from "next/router";
 
 export default function ForgotPassTwo() {
-  const router = useRouter()
+  const router = useRouter();
+
   const handleOTPSubmit = (event) => {
     event.preventDefault();
-    router.push('/forgotPassword')
+    router.push('/forgot-password')
   }
 
   return (
@@ -34,7 +35,7 @@ export default function ForgotPassTwo() {
                     id="email-address"
                     name="email"
                     type="number"
-                    required
+                    // required
                     className="ml-3 flex-1 block w-full font-normal px-3 py-2 border-l-2 border-gray-200  placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Enter Verification Code*"
                   />
@@ -55,12 +56,12 @@ export default function ForgotPassTwo() {
               >
                 Continue
               </button>
-              <button
-                type="submit"
-                className="relative flex items-center text-xl mt-8 justify-center w-75 h-16 px-4 py-2 text-md font-medium text-white bg-[#707070] border border-transparent rounded-md group hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              <div
+                onClick={() => router.push('/')}
+                className="relative flex items-center text-xl mt-8 justify-center w-75 h-16 px-4 py-2 text-md font-medium text-white bg-[#707070] border border-transparent rounded-md group hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 cursor-pointer"
               >
                 Back To Login
-              </button>
+              </div>
             </div>
           </form>
         </div>

@@ -17,24 +17,27 @@ export default function Layout({ children }) {
 
     return (
         <div className='min-h-screen'>
-            {router.pathname === '/' ?
-            <div className='flex min-h-screen'>
-                <aside className="hidden md:w-8/12 md:flex items-center justify-center bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${loginSidebarImage.src})` }}>
-                <Image src={loginLogoImage} alt="SideBar Image" width={541} height={257} priority={true} className='relative w-full max-w-lg shrink-0' />
-                </aside>
-                <div className='w-full md:w-6/12'>
-                    <main>{children}</main>
-                </div>
-            </div> :
-            <div className='flex h-screen overflow-hidden'>
-                <Sidebar isOpen={isOpen} />
-                <div className='relative flex-1 flex flex-col overflow-auto'>
-                    <div className="bg-colorThemeSecondary sticky top-0 z-20 border-b border-gray-200 px-10 py-5">
-                        <Header toggleSidebar={toggleSidebar} />
+            {
+                (router.pathname === '/' || router.pathname === '/forgot-password' || router.pathname === '/verify-email' || router.pathname === '/verify-OTP') ? (
+                    <div className='flex min-h-screen'>
+                        <aside className="hidden md:w-8/12 md:flex items-center justify-center bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${loginSidebarImage.src})` }}>
+                            <Image src={loginLogoImage} alt="SideBar Image" width={541} height={257} priority={true} className='relative w-full max-w-lg shrink-0' />
+                        </aside>
+                        <div className='w-full md:w-6/12'>
+                            <main>{children}</main>
+                        </div>
                     </div>
-                    <main className='flex-1 bg-colorThemeTertiary'>{children}</main>
-                </div>
-            </div>
+                ) : (
+                    <div className='flex h-screen overflow-hidden'>
+                        <Sidebar isOpen={isOpen} />
+                        <div className='relative flex-1 flex flex-col overflow-auto'>
+                            <div className="bg-colorThemeSecondary sticky top-0 z-20 border-b border-gray-200 px-10 py-5">
+                                <Header toggleSidebar={toggleSidebar} />
+                            </div>
+                            <main className='flex-1 bg-colorThemeTertiary'>{children}</main>
+                        </div>
+                    </div>
+                )
             }
         </div>
     )
