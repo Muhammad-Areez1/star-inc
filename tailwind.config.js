@@ -13,6 +13,7 @@ module.exports = {
         colorTertiary: '#F16668', // light red
         colorThemePrimary: '#000', // black
         colorThemeSecondary: '#fff', // white
+        colorThemeTertiary: '#fcfcfc', // light gray
         colorBtnSecondary: '#707070'
       },
       backgroundImage: {
